@@ -96,7 +96,7 @@ class Window():
                 item_xp = int(self.buttons[index][4]["text"])
                 item_num = int(self.buttons[index][1].get())
                 wt += item_wt*item_num
-                if item_xp+xp_mod > 0:
+                if item_xp>0 and item_xp+xp_mod > 0:
                     xp+=(item_xp+xp_mod)*item_num
         self.totalweight.set(wt)
         self.totalxpcost.set(xp)
