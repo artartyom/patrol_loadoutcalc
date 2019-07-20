@@ -52,11 +52,12 @@ class Window():
 
 
     def add_multibutton(self, item_data):
-        self.buttonvals.append(tkinter.BooleanVar())
+        self.buttonvals.append((tkinter.BooleanVar(),tkinter.IntVar()))
+        self.buttonvals[-1][1].set(1)
         self.buttons.append(
             [
-                tkinter.Checkbutton(self.frame, var=self.buttonvals[len(self.buttonvals)-1]),
-                tkinter.Spinbox(self.frame, from_ = 1, to = 10, width = 3),
+                tkinter.Checkbutton(self.frame, var=self.buttonvals[len(self.buttonvals)-1][0]),
+                tkinter.Spinbox(self.frame, from_ = 1, to = 10, width = 3, textvariable=self.buttonvals[len(self.buttonvals)-1][1]),
                 tkinter.Label(self.frame, text=str(item_data[0])),
                 tkinter.Label(self.frame, text=str(item_data[2])),
                 tkinter.Label(self.frame, text=str(item_data[3]))
@@ -79,19 +80,25 @@ class Window():
                 tkinter.Label(self.footerframe, text="Calculated XP cost: "),
                 tkinter.Label(self.footerframe, textvariable=self.totalxpcost)
             ),
-            tkinter.Button(self.footerframe, text="Recalculate", command = lambda: self.recalculate())
+            (
+                tkinter.Button(self.footerframe, text="Recalculate", command = lambda: self.recalculate()),
+                tkinter.Button(self.footerframe, text="Add standard loadout", command = lambda: self.stdload()),
+                tkinter.Button(self.footerframe, text="Reset", command = lambda: self.reset())
+            )
             )
         for y in range(0, len(self.footer)-1):
-            self.footer[y][0].grid(row=y+len(self.buttons)+2, column=2)
-            self.footer[y][1].grid(row=y+len(self.buttons)+2, column=3)
-        self.footer[-1].grid(row=len(self.buttons)+3, column=4)
+            self.footer[y][0].grid(row=y, column=1)
+            self.footer[y][1].grid(row=y, column=2)
+        self.footer[-1][0].grid(row=3, column=1)
+        self.footer[-1][1].grid(row=4, column=1)
+        self.footer[-1][2].grid(row=5, column=1)
 
     def recalculate(self):
         wt=0
         xp=0
         xp_mod=int(self.xpmod.get())
         for index in range(0,len(self.buttons)):
-            if self.buttonvals[index].get():
+            if self.buttonvals[index][0].get():
                 item_wt = int(self.buttons[index][3]["text"])
                 item_xp = int(self.buttons[index][4]["text"])
                 item_num = int(self.buttons[index][1].get())
@@ -100,6 +107,17 @@ class Window():
                     xp+=(item_xp+xp_mod)*item_num
         self.totalweight.set(wt)
         self.totalxpcost.set(xp)
+
+    def reset(self):
+        self.totalweight.set(0)
+        self.totalxpcost.set(0)
+        self.xpmod.set(0)
+        for index in range(0, len(self.buttons)):
+            self.buttonvals[index][0].set(0)
+            self.buttonvals[index][1].set(1)
+
+    def stdload(self):
+        self.recalculate()
 
     def render(self):
         self.make_footer()
