@@ -1,160 +1,160 @@
-id	name	type	weight	xp_cost	max_charges
-0	Entrenching Tool	generic	2	2	-1
-1	Binoculars	generic	2	2	-1
-2	Phrasebook	generic	1	3	-1
-3	Whistle	generic	2	5	-1
-4	Flare Gun	generic	1	2	1
-5	Crowbar	generic	2	2	-1
-6	Toolkit	generic	1	2	-1
-7	Wirecutters	generic	2	2	-1
-8	Flashlight	generic	1	2	-1
-9	First Aid Kit	medical	1	0	1
-10	Medical Bag	medical	3	3	-1
-11	Blood Plasma	medical	1	0	1
-12	Stretcher	medical	2	0	-1
-13	Webbing Belt	load_bearing	0	3	-1
-14	Tactical Vest	load_bearing	0	3	-1
-15	Bandoleer	load_bearing	0	3	-1
-16	Haversack	load_bearing	2	0	-1
-17	Military Pack	load_bearing	4	1	-1
-18	Civilian Basket	load_bearing	2	1	-1
-19	Wagon	load_bearing	20	0	-1
-20	Portable Radio Telephone	comms	6	5	12
-21	Handheld Radio Telephone	comms	6	5	6
-22	Helmet Radio Receiver	comms	1	3	6
-23	Signal Booster	comms	6	4	-1
-24	Field Telephone	comms	6	4	-1
-25	Field Switchboard	comms	6	4	-1
-26	Telephone Headset	comms	2	3	-1
-27	Electrical Line	comms	2	0	1
-28	Transistor Radio	comms	2	1	12
-29	Camera	electronics	1	2	-1
-30	Starlight Scope	electronics	2	6	6
-31	Lineman's Phone	electronics	3	4	-1
-32	Cassette Deck	electronics	1	2	1
-33	Loudspeaker	electronics	3	2	-1
-34	People Sniffer	electronics	8	4	6
-35	Intruder Detector	electronics	1	2	-1
-36	Footwear	wearable	2	1	-1
-37	Poncho	wearable	2	1	-1
-38	Dog Tags	wearable	0	1	-1
-39	Sniper Suit	wearable	5	5	-1
-40	Scuba Tank	wearable	8	3	3
-41	Fatigues	wearable	2	0	-1
-42	Camouflage Fatigues	wearable	2	4	-1
-43	Civvies	wearable	1	0	-1
-44	Wetsuit	wearable	2	3	-1
-45	Field Jacket	wearable	2	1	-1
-46	Steel Helmet	armor	2	1	-1
-47	Flak Jacket	armor	4	3	-1
-48	Crash Helmet	armor	2	3	-1
-49	Chicken Plate	armor	10	3	-1
-50	Parachute	armor	10	3	1
-51	Life Preserver	armor	3	2	-1
-52	Gas Mask	armor	2	1	-1
-53	Bicycle	rideable	8	3	-1
-54	Motorcycle	rideable	16	6	-1
-55	Rations	supplies	2	0	1
-56	Grub	supplies	2	0	1
-57	Care Package	supplies	1	2	1
-58	Tobacco	supplies	1	1	1
-59	Chlorine Tablet	supplies	1	0	5
-60	Signal Flag	supplies	1	1	3
-61	Development Kit	supplies	1	1	1
-62	Spare Battery	supplies	2	0	1
-63	Barbed Wire Spool	supplies	2	0	1
-64	Camo Netting	supplies	2	0	1
-65	Leaflet	supplies	1	0	5
-66	Death Card	supplies	1	0	5
-67	Canteen	liquid_carrier	1	0	2
-68	Water Carrier	liquid_carrier	6	0	10
-69	Jerry Can	liquid_carrier	6	0	12
-70	Flamethrower Tank	liquid_carrier	10	0	10
-71	Barrel	liquid_carrier	25	0	60
-72	Uppers	narcotics	1	2	1
-73	Downers	narcotics	1	2	1
-74	Opiates	narcotics	1	2	1
-75	Hallucinogens	narcotics	0	2	1
-76	Assault Rifle	firearm	3	4	-1
-77	Battle Rifle	firearm	3	4	-1
-78	Pistol	firearm	1	3	-1
-79	Machine-Pistol	firearm	1	4	-1
-80	Submachine-Gun	firearm	2	3	-1
-81	Bolt Action Rifle	firearm	4	4	-1
-82	Shotgun	firearm	2	3	-1
-83	Light Machine-Gun	firearm	5	6	-1
-84	Carbine	firearm	2	3	-1
-85	Auto Carbine	firearm	2	4	-1
-86	Anti-Tank Rifle	firearm	6	6	-1
-87	Gyrojet	firearm	0	4	-1
-88	Crossbow	special_firearms	3	3	-1
-89	Medium Machine-Gun	special_firearms	6	6	-1
-90	Heavy Machine-Gun	special_firearms	4	6	-1
-91	Water-Cooled Machine-Gun	special_firearms	8	6	-1
-92	Flamethrower	special_firearms	4	4	-1
-93	Incendiary Projector	special_firearms	6	4	-1
-94	Minigun	special_firearms	6	6	-1
-95	Man Portable Air Defence	special_firearms	6	6	-1
-96	Rocket Launcher	special_firearms	5	3	-1
-97	Disposable Anti-Tank Weapon	special_firearms	3	3	1
-98	Tow Missile	special_firearms	6	6	1
-99	Small Recoilless Rifle	recoilless	8	6	-1
-100	Large Recoilless Rifle	recoilless	10	6	-1
-101	Grenade Launcher	grenade_launcher	3	4	-1
-102	Automatic Grenade Launcher	grenade_launcher	8	6	-1
-103	RPG Launcher	grenade_launcher	4	4	-1
-104	Frag Grenade	grenade	1	0	1
-105	Concussion Grenade	grenade	1	0	1
-106	Stun Grenades	grenade	1	0	1
-107	Anti-Tank Grenade	grenade	1	1	1
-108	Defensive Grenade	grenade	1	0	1
-109	Satchel Charge	grenade	5	2	1
-110	Smoke Grenade	grenade	1	0	1
-111	CS Grenade	grenade	1	0	1
-112	Molotov Cocktail	grenade	2	0	1
-113	Incendiary Grenade	grenade	1	2	1
-114	Combat Knife	melee	1	0	-1
-115	Club	melee	1	0	-1
-116	Machete	melee	2	3	-1
-117	Garrotte Wire	melee	1	2	-1
-118	Scope	item_mods	2	4	-1
-119	Bipod	item_mods	2	3	-1
-120	Suppressor	item_mods	1	3	-1
-121	Underbarrel Mount	item_mods	0	0	-1
-122	Extended Magazines	item_mods	1	0	-1
-123	Spare Ammo	wpn_supplies	1	0	1
-124	Heavy Ammo Belt	wpn_supplies	2	0	1
-125	Spare Barrel	wpn_supplies	2	0	1
-126	Rocket	wpn_supplies	2	0	1
-127	Wire Missile	wpn_supplies	4	1	1
-128	IR Missile	wpn_supplies	4	2	1
-129	Micro-Rockets	wpn_supplies	1	1	1
-130	Arrows	wpn_supplies	1	0	1
-131	Autocannon	heavy	90	0	-1
-132	Light AT Cannon	heavy	120	0	-1
-133	Heavy AT Cannon	heavy	150	0	-1
-134	Rocket Pod	heavy	150	0	-1
-135	Portable Mortar	artillery	5	6	-1
-136	Medium Mortar	artillery	6	6	-1
-137	Heavy Mortar	artillery	12	6	-1
-138	Medium Artillery	artillery	400	0	-1
-139	Heavy Artillery	artillery	500	0	-1
-140	Long-Ranged Arty	artillery	400	0	-1
-141	Pack Howitzer	artillery	300	0	-1
-142	Rocket Artillery	artillery	300	0	-1
-143	Blast Mine	traps	3	0	1
-144	Non-Metallic Blast Mine	traps	3	0	1
-145	S-Mine	traps	3	0	1
-146	Trip Flare	traps	3	0	1
-147	Anti-Tank Mine	traps	3	0	1
-148	Toe Popper	traps	1	0	1
-149	Punji Stake	traps	2	0	1
-150	Crossbow Trap	traps	3	0	1
-151	Claymore Mine	traps	3	0	1
-152	Fougasse Barrel	traps	8	0	1
-153	Demolition Charge	traps	5	0	1
-154	Blasting Cap	traps	1	0	1
-155	Bangalore Torpedo	explosive	3	0	1
-156	Minesweeper	explosive	5	5	-1
-157	Detonator	explosive	1	0	-1
-158	Thermite	explosive	1	1	1
+id	name	type	weight	xp_cost	max_charges	std
+0	Entrenching Tool	generic	2	2	-1	1
+1	Binoculars	generic	2	2	-1	0
+2	Phrasebook	generic	1	3	-1	0
+3	Whistle	generic	2	5	-1	0
+4	Flare Gun	generic	1	2	1	0
+5	Crowbar	generic	2	2	-1	0
+6	Toolkit	generic	1	2	-1	0
+7	Wirecutters	generic	2	2	-1	0
+8	Flashlight	generic	1	2	-1	1
+9	First Aid Kit	medical	1	0	1	1
+10	Medical Bag	medical	3	3	-1	0
+11	Blood Plasma	medical	1	0	1	0
+12	Stretcher	medical	2	0	-1	0
+13	Webbing Belt	load_bearing	0	3	-1	1
+14	Tactical Vest	load_bearing	0	3	-1	0
+15	Bandoleer	load_bearing	0	3	-1	0
+16	Haversack	load_bearing	2	0	-1	0
+17	Military Pack	load_bearing	4	1	-1	1
+18	Civilian Basket	load_bearing	2	1	-1	0
+19	Wagon	load_bearing	20	0	-1	0
+20	Portable Radio Telephone	comms	6	5	12	0
+21	Handheld Radio Telephone	comms	6	5	6	0
+22	Helmet Radio Receiver	comms	1	3	6	0
+23	Signal Booster	comms	6	4	-1	0
+24	Field Telephone	comms	6	4	-1	0
+25	Field Switchboard	comms	6	4	-1	0
+26	Telephone Headset	comms	2	3	-1	0
+27	Electrical Line	comms	2	0	1	0
+28	Transistor Radio	comms	2	1	12	0
+29	Camera	electronics	1	2	-1	0
+30	Starlight Scope	electronics	2	6	6	0
+31	Lineman's Phone	electronics	3	4	-1	0
+32	Cassette Deck	electronics	1	2	1	0
+33	Loudspeaker	electronics	3	2	-1	0
+34	People Sniffer	electronics	8	4	6	0
+35	Intruder Detector	electronics	1	2	-1	0
+36	Footwear	wearable	2	1	-1	1
+37	Poncho	wearable	2	1	-1	1
+38	Dog Tags	wearable	0	1	-1	1
+39	Sniper Suit	wearable	5	5	-1	0
+40	Scuba Tank	wearable	8	3	3	0
+41	Fatigues	wearable	2	0	-1	1
+42	Camouflage Fatigues	wearable	2	4	-1	0
+43	Civvies	wearable	1	0	-1	0
+44	Wetsuit	wearable	2	3	-1	0
+45	Field Jacket	wearable	2	1	-1	1
+46	Steel Helmet	armor	2	1	-1	1
+47	Flak Vest	armor	4	3	-1	1
+48	Crash Helmet	armor	2	3	-1	0
+49	Chicken Plate	armor	10	3	-1	0
+50	Parachute	armor	10	3	1	0
+51	Life Preserver	armor	3	2	-1	0
+52	Gas Mask	armor	2	1	-1	1
+53	Bicycle	rideable	8	3	-1	0
+54	Motorcycle	rideable	16	6	-1	0
+55	Rations	supplies	2	0	1	0
+56	Grub	supplies	2	0	1	0
+57	Care Package	supplies	1	2	1	0
+58	Tobacco	supplies	1	1	1	0
+59	Chlorine Tablet	supplies	1	0	5	0
+60	Signal Flag	supplies	1	1	3	0
+61	Development Kit	supplies	1	1	1	0
+62	Spare Battery	supplies	2	0	1	0
+63	Barbed Wire Spool	supplies	2	0	1	0
+64	Camo Netting	supplies	2	0	1	0
+65	Leaflet	supplies	1	0	5	0
+66	Death Card	supplies	1	0	5	0
+67	Canteen	liquid_carrier	1	0	2	0
+68	Water Carrier	liquid_carrier	6	0	10	0
+69	Jerry Can	liquid_carrier	6	0	12	0
+70	Flamethrower Tank	liquid_carrier	10	0	10	0
+71	Barrel	liquid_carrier	25	0	60	0
+72	Uppers	narcotics	1	2	1	0
+73	Downers	narcotics	1	2	1	0
+74	Opiates	narcotics	1	2	1	0
+75	Hallucinogens	narcotics	0	2	1	0
+76	Assault Rifle	firearm	3	4	-1	0
+77	Battle Rifle	firearm	3	4	-1	0
+78	Pistol	firearm	1	3	-1	0
+79	Machine-Pistol	firearm	1	4	-1	0
+80	Submachine-Gun	firearm	2	3	-1	0
+81	Bolt Action Rifle	firearm	4	4	-1	0
+82	Shotgun	firearm	2	3	-1	0
+83	Light Machine-Gun	firearm	5	6	-1	0
+84	Carbine	firearm	2	3	-1	0
+85	Auto Carbine	firearm	2	4	-1	0
+86	Anti-Tank Rifle	firearm	6	6	-1	0
+87	Gyrojet	firearm	0	4	-1	0
+88	Crossbow	special_firearms	3	3	-1	0
+89	Medium Machine-Gun	special_firearms	6	6	-1	0
+90	Heavy Machine-Gun	special_firearms	4	6	-1	0
+91	Water-Cooled Machine-Gun	special_firearms	8	6	-1	0
+92	Flamethrower	special_firearms	4	4	-1	0
+93	Incendiary Projector	special_firearms	6	4	-1	0
+94	Minigun	special_firearms	6	6	-1	0
+95	Man Portable Air Defence	special_firearms	6	6	-1	0
+96	Rocket Launcher	special_firearms	5	3	-1	0
+97	Disposable Anti-Tank Weapon	special_firearms	3	3	1	0
+98	Tow Missile	special_firearms	6	6	1	0
+99	Small Recoilless Rifle	recoilless	8	6	-1	0
+100	Large Recoilless Rifle	recoilless	10	6	-1	0
+101	Grenade Launcher	grenade_launcher	3	4	-1	0
+102	Automatic Grenade Launcher	grenade_launcher	8	6	-1	0
+103	RPG Launcher	grenade_launcher	4	4	-1	0
+104	Frag Grenade	grenade	1	0	1	0
+105	Concussion Grenade	grenade	1	0	1	0
+106	Stun Grenades	grenade	1	0	1	0
+107	Anti-Tank Grenade	grenade	1	1	1	0
+108	Defensive Grenade	grenade	1	0	1	0
+109	Satchel Charge	grenade	5	2	1	0
+110	Smoke Grenade	grenade	1	0	1	0
+111	CS Grenade	grenade	1	0	1	0
+112	Molotov Cocktail	grenade	2	0	1	0
+113	Incendiary Grenade	grenade	1	2	1	0
+114	Combat Knife	melee	1	0	-1	1
+115	Club	melee	1	0	-1	0
+116	Machete	melee	2	3	-1	0
+117	Garrotte Wire	melee	1	2	-1	0
+118	Scope	item_mods	2	4	-1	0
+119	Bipod	item_mods	2	3	-1	0
+120	Suppressor	item_mods	1	3	-1	0
+121	Underbarrel Mount	item_mods	0	0	-1	0
+122	Extended Magazines	item_mods	1	0	-1	0
+123	Spare Ammo	wpn_supplies	1	0	1	0
+124	Heavy Ammo Belt	wpn_supplies	2	0	1	0
+125	Spare Barrel	wpn_supplies	2	0	1	0
+126	Rocket	wpn_supplies	2	0	1	0
+127	Wire Missile	wpn_supplies	4	1	1	0
+128	IR Missile	wpn_supplies	4	2	1	0
+129	Micro-Rockets	wpn_supplies	1	1	1	0
+130	Arrows	wpn_supplies	1	0	1	0
+131	Autocannon	heavy	90	0	-1	0
+132	Light AT Cannon	heavy	120	0	-1	0
+133	Heavy AT Cannon	heavy	150	0	-1	0
+134	Rocket Pod	heavy	150	0	-1	0
+135	Portable Mortar	artillery	5	6	-1	0
+136	Medium Mortar	artillery	6	6	-1	0
+137	Heavy Mortar	artillery	12	6	-1	0
+138	Medium Artillery	artillery	400	0	-1	0
+139	Heavy Artillery	artillery	500	0	-1	0
+140	Long-Ranged Arty	artillery	400	0	-1	0
+141	Pack Howitzer	artillery	300	0	-1	0
+142	Rocket Artillery	artillery	300	0	-1	0
+143	Blast Mine	traps	3	0	1	0
+144	Non-Metallic Blast Mine	traps	3	0	1	0
+145	S-Mine	traps	3	0	1	0
+146	Trip Flare	traps	3	0	1	0
+147	Anti-Tank Mine	traps	3	0	1	0
+148	Toe Popper	traps	1	0	1	0
+149	Punji Stake	traps	2	0	1	0
+150	Crossbow Trap	traps	3	0	1	0
+151	Claymore Mine	traps	3	0	1	0
+152	Fougasse Barrel	traps	8	0	1	0
+153	Demolition Charge	traps	5	0	1	0
+154	Blasting Cap	traps	1	0	1	0
+155	Bangalore Torpedo	explosive	3	0	1	0
+156	Minesweeper	explosive	5	5	-1	0
+157	Detonator	explosive	1	0	-1	0
+158	Thermite	explosive	1	1	1	0
