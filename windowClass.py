@@ -1,7 +1,7 @@
 import tkinter
 
 class Window():
-    def myfunction(self, event):
+    def scroll(self, event):
         self.canvas.configure(scrollregion=self.canvas.bbox("all"),width=400,height=580)
 
     def __init__(self, windowName):
@@ -20,7 +20,7 @@ class Window():
         self.scrollbar.pack(side="right", fill="y")
         
         self.canvas.create_window((0,0),window=self.frame)
-        self.frame.bind("<Configure>",self.myfunction)
+        self.frame.bind("<Configure>",self.scroll)
 
         self.footercanvas=tkinter.Canvas(self.footerframe)
         self.footerframe=tkinter.Frame(self.footercanvas)

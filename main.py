@@ -1,11 +1,5 @@
-import windowClass as wnd
-import items
+import windowClass_reworked as wnd
+import pandas as pd
 
-itemlist = items.load_items("items.tsv")
-
-main=wnd.Window("Calculator")
-
-for item in itemlist:
-    main.add_multibutton(item)
-
-main.render()
+itemlist = pd.read_csv("items.tsv", sep="\t")
+main=wnd.Window("Calculator", itemlist)
