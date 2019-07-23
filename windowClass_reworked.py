@@ -41,11 +41,18 @@ class Scrollframe():
             self.buttons[-1][x].grid(row=len(self.buttons)+1, column=x+1)
 
     def sort(self, var):
-        self.repopulate_scrollframe(data = self.data.sort_values(var), new = False)
+        if self.sortedby[0] == var:
+            self.repopulate_scrollframe(data = self.data.sort_values(var, ascending = 1-self.sortedby[1]), new = False)
+            self.sortedby = (var, 1-self.sortedby[1])
+        else:
+            self.repopulate_scrollframe(data = self.data.sort_values(var, ascending = 1), new = False)
+            self.sortedby = (var, 1)
+
 
     def __init__(self, root, data):
         self.root = root
         self.data = data
+        
         self.parts = {"master" : tkinter.Frame(self.root, relief=tkinter.GROOVE, width=400, height=580, bd=1)}
         self.parts["canvas"] = tkinter.Canvas(self.parts["master"])
         self.parts["frame"] = tkinter.Frame(self.parts["canvas"])
@@ -68,7 +75,10 @@ class Scrollframe():
 
         self.buttonvals = []
         self.buttons = []
+
         self.repopulate_scrollframe(self.data, new = True)
+        self.sortedby = ("none", 1)
+
         self.parts["master"].place(x=0, y=0)
 
 class Staticframe():
