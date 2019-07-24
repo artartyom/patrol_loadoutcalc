@@ -120,7 +120,7 @@ class Window():
 
         self.itemdata = itemdata
         self.stdload = self.itemdata[self.itemdata["std"]==1]["id"]
-        print(self.stdload)
+        self.negatable = (41, 36)
 
         self.itemView = Scrollframe(self.window, self.itemdata)
 
@@ -206,11 +206,25 @@ class Window():
         xp_modifier=self.vars["xpmod"].get()
         total_wt=0
         total_xp=0
-        for button_val in self.itemView.multibuttons["buttonvals"]:
+        
+        for i in range(0, len(self.itemView.multibuttons["buttonvals"])):
+            
+            button_val = self.itemView.multibuttons["buttonvals"][i]
+            itemcount = button_val[1].get()
+
             if button_val[0].get():
-                total_wt+=button_val[1].get()*button_val[4].get()
+                if i in self.negatable:
+                    total_wt+=(itemcount-1)*button_val[4].get()
+                else:
+                    total_wt+=itemcount*button_val[4].get()
+
                 if button_val[5].get() > 0 and (button_val[5].get()+xp_modifier) > 0 :
-                    total_xp += (button_val[5].get() + xp_modifier) * button_val[1].get()
+                    if i in self.stdload:
+                        itemcount -= 1
+                        if itemcount < 0:
+                            itemcount = 0
+                    total_xp += (button_val[5].get() + xp_modifier) * itemcount
+
         self.vars["totalweight"].set(total_wt)
         self.vars["totalcost"].set(total_xp)
 
