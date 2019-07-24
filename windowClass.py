@@ -175,7 +175,7 @@ class Window():
         self.filterFrame=tkinter.Canvas(self.window, width=240, height=300)
 
         for itemtype in set(self.itemdata.loc[:,"type"]):
-            print(itemtype)
+            #print(itemtype)
             self.filters.append([
                 itemtype,
                 tkinter.BooleanVar()
