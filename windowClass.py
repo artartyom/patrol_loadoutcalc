@@ -6,6 +6,21 @@ class Scrollframe():
         self.parts["canvas"].configure(scrollregion=self.parts["canvas"].bbox("all"),width=530,height=535)
 
     def repopulate_scrollframe(self, data, new = False):
+        for item in ["frame","scrollbar","canvas"]:
+            try:
+                if self.parts[item]:
+                    self.parts[item].destroy()
+            except KeyError:
+                pass
+
+        self.parts["canvas"] = tkinter.Canvas(self.parts["down_row"])
+        self.parts["frame"] = tkinter.Canvas(self.parts["canvas"], width = 540, height = 30*len(data.axes[0]))
+        self.parts["scrollbar"] = tkinter.Scrollbar(self.parts["down_row"], orient="vertical",command=self.parts["canvas"].yview)
+        self.parts["canvas"].configure(yscrollcommand=self.parts["scrollbar"].set)        
+        self.parts["canvas"].pack(side="left")
+        self.parts["scrollbar"].pack(side="right", fill="y")        
+        self.parts["canvas"].create_window((5,40),window=self.parts["frame"])
+        self.parts["frame"].bind("<Configure>",self.scroll)
 
         for i in range(0,6):
             self.parts["labels"][i].place(x=self.xval[i], y=self.yval[i])
@@ -71,17 +86,10 @@ class Scrollframe():
         self.parts = {"master" : tkinter.Frame(self.root, relief=tkinter.GROOVE, width=550, height=590)}
         self.parts["upper_row"] = tkinter.Frame(self.parts["master"],relief=tkinter.GROOVE, width = 545, height = 30, bd = 1)
         self.parts["down_row"] = tkinter.Frame(self.parts["master"], relief = tkinter.GROOVE, width=540, height = 535, bd = 1)
-        self.parts["canvas"] = tkinter.Canvas(self.parts["down_row"])
-        self.parts["frame"] = tkinter.Canvas(self.parts["canvas"], width = 540, height = 30*len(self.data.axes[0]))
-        self.parts["scrollbar"] = tkinter.Scrollbar(self.parts["down_row"], orient="vertical",command=self.parts["canvas"].yview)
+
+
         self.parts["upper_row"].place(x=5, y=5)
         self.parts["down_row"].place(x=5, y=40)
-        self.parts["canvas"].configure(yscrollcommand=self.parts["scrollbar"].set)        
-        self.parts["canvas"].pack(side="left")
-        self.parts["scrollbar"].pack(side="right", fill="y")
-        
-        self.parts["canvas"].create_window((5,40),window=self.parts["frame"])
-        self.parts["frame"].bind("<Configure>",self.scroll)
 
         self.parts["labels"] = (
             tkinter.Label(self.parts["upper_row"], text="Use"),
@@ -214,7 +222,8 @@ class Window():
         selected_rows=[]
         for i in range(0,len(self.itemdata.axes[0])):
             selected_rows.append(self.itemdata.iloc[i,2] in selected)
-        self.itemView.repopulate_scrollframe(self.itemdata[selected_rows], new=False)
+        self.itemView.data = self.itemdata[selected_rows]
+        self.itemView.repopulate_scrollframe(self.itemView.data, new=False)
 
     def allfilter(self, selection_mode):
         for filt in self.filters:
